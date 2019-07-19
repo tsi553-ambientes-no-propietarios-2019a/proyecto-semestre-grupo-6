@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -35,6 +37,28 @@ class Questions
      * @ORM\Column(type="string", length=255)
      */
     private $Answer;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="questions")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $usrfk;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Options", mappedBy="questionsfk")
+     */
+    private $options;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Control", mappedBy="questionsfk")
+     */
+    private $controls;
+
+    public function __construct()
+    {
+        $this->options = new ArrayCollection();
+        $this->controls = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -85,6 +109,80 @@ class Questions
     public function setAnswer(string $Answer): self
     {
         $this->Answer = $Answer;
+
+        return $this;
+    }
+
+    public function getUsrfk(): ?User
+    {
+        return $this->usrfk;
+    }
+
+    public function setUsrfk(?User $usrfk): self
+    {
+        $this->usrfk = $usrfk;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Options[]
+     */
+    public function getOptions(): Collection
+    {
+        return $this->options;
+    }
+
+    public function addOption(Options $option): self
+    {
+        if (!$this->options->contains($option)) {
+            $this->options[] = $option;
+            $option->setQuestionsfk($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOption(Options $option): self
+    {
+        if ($this->options->contains($option)) {
+            $this->options->removeElement($option);
+            // set the owning side to null (unless already changed)
+            if ($option->getQuestionsfk() === $this) {
+                $option->setQuestionsfk(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Control[]
+     */
+    public function getControls(): Collection
+    {
+        return $this->controls;
+    }
+
+    public function addControl(Control $control): self
+    {
+        if (!$this->controls->contains($control)) {
+            $this->controls[] = $control;
+            $control->setQuestionsfk($this);
+        }
+
+        return $this;
+    }
+
+    public function removeControl(Control $control): self
+    {
+        if ($this->controls->contains($control)) {
+            $this->controls->removeElement($control);
+            // set the owning side to null (unless already changed)
+            if ($control->getQuestionsfk() === $this) {
+                $control->setQuestionsfk(null);
+            }
+        }
 
         return $this;
     }

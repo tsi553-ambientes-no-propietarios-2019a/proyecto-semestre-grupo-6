@@ -36,6 +36,12 @@ class Options
      */
     private $option3;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Questions", inversedBy="options")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $questionsfk;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +91,18 @@ class Options
     public function setOption3(string $option3): self
     {
         $this->option3 = $option3;
+
+        return $this;
+    }
+
+    public function getQuestionsfk(): ?Questions
+    {
+        return $this->questionsfk;
+    }
+
+    public function setQuestionsfk(?Questions $questionsfk): self
+    {
+        $this->questionsfk = $questionsfk;
 
         return $this;
     }
