@@ -19,11 +19,6 @@ class Questions
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=10)
-     */
-    private $Id_Question;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $Question;
@@ -63,11 +58,6 @@ class Questions
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdQuestion(): ?string
-    {
-        return $this->Id_Question;
     }
 
     public function setIdQuestion(string $Id_Question): self
