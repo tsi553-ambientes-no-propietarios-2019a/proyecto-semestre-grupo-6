@@ -49,6 +49,21 @@ class Questions
      */
     private $controls;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Option1;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Option2;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Option3;
+
     public function __construct()
     {
         $this->options = new ArrayCollection();
@@ -173,6 +188,42 @@ class Questions
                 $control->setQuestionsfk(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getOption1(): ?string
+    {
+        return $this->Option1;
+    }
+
+    public function setOption1(string $Option1): self
+    {
+        $this->Option1 = $Option1;
+
+        return $this;
+    }
+
+    public function getOption2(): ?string
+    {
+        return $this->Option2;
+    }
+
+    public function setOption2(string $Option2): self
+    {
+        $this->Option2 = $Option2;
+
+        return $this;
+    }
+
+    public function getOption3(): ?string
+    {
+        return $this->Option3;
+    }
+
+    public function setOption3(string $Option3): self
+    {
+        $this->Option3 = $Option3;
 
         return $this;
     }
