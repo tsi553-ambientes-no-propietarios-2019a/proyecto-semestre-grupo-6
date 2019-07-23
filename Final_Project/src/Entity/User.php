@@ -28,7 +28,6 @@ class User extends BaseUser
         $this->tries = new ArrayCollection();
         // your own logic
     }
-    protected $name;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Questions", mappedBy="usrfk")
@@ -39,6 +38,11 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="App\Entity\Tries", mappedBy="usrfk")
      */
     private $tries;
+
+    /**
+     * @ORM\Column(type="string", length=120)
+     */
+    private $name;
 
     /**
      * @return Collection|Questions[]
@@ -98,6 +102,18 @@ class User extends BaseUser
                 $try->setUsrfk(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }

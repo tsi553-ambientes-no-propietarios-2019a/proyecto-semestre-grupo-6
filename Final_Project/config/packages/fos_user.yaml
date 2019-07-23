@@ -5,3 +5,6 @@ fos_user:
     from_email:
         address: "Grupo6"
         sender_name: "aaron.cruz@epn.edu.ec"
+    registration:
+        form:
+            type: App\Form\RegistrationType
