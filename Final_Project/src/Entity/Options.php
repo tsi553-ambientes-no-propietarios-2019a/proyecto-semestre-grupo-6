@@ -15,12 +15,7 @@ class Options
      * @ORM\Column(type="integer")
      */
     private $id;
-
-    /**
-     * @ORM\Column(type="string", length=10)
-     */
-    private $ID_option;
-
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
