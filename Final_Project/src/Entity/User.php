@@ -39,10 +39,6 @@ class User extends BaseUser
      */
     private $tries;
 
-    /**
-     * @ORM\Column(type="string", length=120)
-     */
-    private $name;
 
     /**
      * @return Collection|Questions[]
@@ -106,15 +102,4 @@ class User extends BaseUser
         return $this;
     }
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 }

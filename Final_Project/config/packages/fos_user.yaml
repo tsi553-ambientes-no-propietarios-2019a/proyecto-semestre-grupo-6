@@ -3,8 +3,11 @@ fos_user:
     firewall_name: main
     user_class: App\Entity\User
     from_email:
-        address: "Grupo6"
-        sender_name: "aaron.cruz@epn.edu.ec"
+        address: "aaron.cruz@epn.edu.ec"
+        sender_name: "Grupo6"
+    
     registration:
+        confirmation:
+            enabled: true
         form:
             type: App\Form\RegistrationType
