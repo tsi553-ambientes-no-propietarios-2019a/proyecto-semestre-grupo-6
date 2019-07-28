@@ -21,6 +21,23 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\Column(type="string", length=120)
+     */
+    private $name;
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
     public function __construct()
     {
         parent::__construct();
@@ -39,10 +56,6 @@ class User extends BaseUser
      */
     private $tries;
 
-    /**
-     * @ORM\Column(type="string", length=120)
-     */
-    private $name;
 
     /**
      * @return Collection|Questions[]
@@ -106,15 +119,4 @@ class User extends BaseUser
         return $this;
     }
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 }
