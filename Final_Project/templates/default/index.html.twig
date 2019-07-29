@@ -3,8 +3,37 @@
 {% block title %}Home!{% endblock %}
 
 {% block body %}
-	<div class="container">
-    <h1 class="display-3">Bienvenido al sistema de simulador</h1>
-
+	<img src="{{asset('img/Banner.png')}}" class="img-fluid" alt="Responsive image">
+	<div class="card-group">
+		<div class="card">
+			<img src="{{asset('img/images.png')}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">No es necesario</h5>
+				<p class="card-text">El examen ser bachiller solo es para aquellos estudiantes que quieran ingresar a una universidad pública.</p>
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">29 julio 2019</small>
+			</div>
+		</div>
+		<div class="card">
+			<img src="{{ asset('img/5549.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Ser Bachiller</h5>
+				<p class="card-text">Las inscripciones para dar el examen ser bachiller se las publica en la página oficial de la senescyt.</p>
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">29 julio 2019</small>
+			</div>
+		</div>
+		<div class="card">
+			<img src="{{ asset('img/LOGOS.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">SENESCYT</h5>
+				<p class="card-text">Es el organismo encargado para el ingreso a las universidades públicas del Ecuador.</p>
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">29 julio 2019</small>
+			</div>
+		</div>
 	</div>
 {% endblock %}

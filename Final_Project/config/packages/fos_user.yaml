@@ -8,6 +8,6 @@ fos_user:
     
     registration:
         confirmation:
-            enabled: true
+            enabled: false
         form:
             type: App\Form\RegistrationType
