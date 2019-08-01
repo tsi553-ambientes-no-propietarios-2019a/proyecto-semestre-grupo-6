@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('simulador_guardar', {'id': question.id}) }}" 
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('insert' ~ question.id) }}">
+    <button class="btn-success">Guardar</button>
+</form>

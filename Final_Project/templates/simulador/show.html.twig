@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Simulador{% endblock %}
+
+{% block body %}
+
+    <h1>Simulador</h1>
+    <center>
+    <h2>{{ question.Question }}</h2
+    <hr>
+    <input type="checkbox" name ="check" id="opcion1" value="{{ question.Option1 }}">{{ question.Option1 }}<br>
+    <input type="checkbox" name ="check" id="opcion2" value="{{ question.Option2 }}">{{ question.Option2 }}<br>
+    <input type="checkbox" name ="check" id="opcion3" value="{{ question.Option3 }}">{{ question.Option3 }}<br>
+    <input type="checkbox" name ="check" id="opcion4" value="{{ question.Answer }}">{{ question.Answer }}<br>
+    <br>
+    
+
+    </center>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $('input[type=checkbox]').live('click', function(){
+        var parent = $(this).parent().attr('id');
+        $('#'+parent+' input[type=checkbox]').removeAttr('checked');
+        $(this).attr('checked', 'checked');
+    });
+});
+</script>
+{% endblock %}
