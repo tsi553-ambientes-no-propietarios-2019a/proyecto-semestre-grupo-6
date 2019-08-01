@@ -12,35 +12,35 @@
                 <td>{{ question.id }}</td>
             </tr>
             <tr>
-                <th>Question</th>
+                <th>Pregunta</th>
                 <td>{{ question.Question }}</td>
             </tr>
             <tr>
-                <th>Categorie</th>
+                <th>Categoria</th>
                 <td>{{ question.Categorie }}</td>
             </tr>
             <tr>
-                <th>Answer</th>
+                <th>Respuesta</th>
                 <td>{{ question.Answer }}</td>
             </tr>
             <tr>
-                <th>Option1</th>
+                <th>Opción 1</th>
                 <td>{{ question.Option1 }}</td>
             </tr>
             <tr>
-                <th>Option2</th>
+                <th>Opción 2</th>
                 <td>{{ question.Option2 }}</td>
             </tr>
             <tr>
-                <th>Option3</th>
+                <th>Opción 3</th>
                 <td>{{ question.Option3 }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('questions_index') }}">back to list</a>
+    <a href="{{ path('questions_index') }}">Regresar</a>
 
-    <a href="{{ path('questions_edit', {'id': question.id}) }}">edit</a>
+    <a href="{{ path('questions_edit', {'id': question.id}) }}">Editar</a>
 
     {{ include('questions/_delete_form.html.twig') }}
 {% endblock %}

@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Questions index{% endblock %}
+{% block title %}Preguntas{% endblock %}
 
 {% block body %}
 
     {{ parent() }}
 
 <div class="container">
-    <h1 class="display-3">Questions index</h1>
+    <h1 class="display-3">Registrar Preguntas</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Question</th>
-                <th>Categorie</th>
-                <th>Answer</th>
-                <th>Option1</th>
-                <th>Option2</th>
-                <th>Option3</th>
-                <th>actions</th>
+                <th>Pregunta</th>
+                <th>Categoria</th>
+                <th>Respuesta</th>
+                <th>Opción 1</th>
+                <th>Opción 2</th>
+                <th>Opción 3</th>
+                <th>¿Qué desea hacer?</th>
             </tr>
         </thead>
         <tbody>
@@ -33,8 +33,8 @@
                 <td>{{ question.Option2 }}</td>
                 <td>{{ question.Option3 }}</td>
                 <td>
-                    <a href="{{ path('questions_show', {'id': question.id}) }}">show</a>
-                    <a href="{{ path('questions_edit', {'id': question.id}) }}">edit</a>
+                    <a href="{{ path('questions_show', {'id': question.id}) }}">Mostrar</a>
+                    <a href="{{ path('questions_edit', {'id': question.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
@@ -45,7 +45,7 @@
         </tbody>
     </table>
 
-    <a class="btn btn-primary btn-lg active" role="button" href="{{ path('questions_new') }}">Create new</a>
+    <a class="btn btn-primary btn-lg active" role="button" href="{{ path('questions_new') }}">Crear Pregunta</a>
 </div>
 
 {% endblock %}
