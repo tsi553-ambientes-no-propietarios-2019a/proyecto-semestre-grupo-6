@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16da5599-1b0d-4d54-8d9d-b042e5544033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SimuladorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SimuladorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/simulador/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/simulador/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/simulador/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/simulador/show.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="16da5599-1b0d-4d54-8d9d-b042e5544033" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +185,7 @@
       <workItem from="1564631917404" duration="4781000" />
       <workItem from="1564687693593" duration="1981000" />
       <workItem from="1564710073944" duration="2443000" />
+      <workItem from="1564713262216" duration="95000" />
     </task>
     <servers />
   </component>
